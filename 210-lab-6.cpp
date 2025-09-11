@@ -2,11 +2,17 @@
 // IDE used: CLion
 //TODO: Use pointer notation over array notation
 
-// receives a dynamic double array and populates it with values that the user enters via the console.
-void enterArrayData();
-// receives a dynamic double array and outputs its contents on one line.
-void outputArrayData();
-//  receives a dynamic double array and both calculates and returns its sum. There is no output in this function
+// enterArrayData() receives a dynamic double array and populates it with values that the user enters via the console.
+// arguments: a dynamic array of type double
+// returns: nothing
+void enterArrayData(double *);
+// outputArrayData() receives a dynamic double array and outputs its contents on one line.
+// arguments: a dynamic array of type double
+// returns: nothing
+void outputArrayData(double *);
+// sumArray() receives a dynamic double array and both calculates and returns its sum.
+// arguments: a dynamic array of type double
+// returns: the sum of the values in the array
 double sumArray();
 
 int main(){
