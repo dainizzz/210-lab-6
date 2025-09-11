@@ -22,3 +22,15 @@ int main(){
 
   return 0;
 }
+
+void enterArrayData(double *arr) {
+
+}
+
+void outputArrayData(double *arr) {
+
+}
+
+double sumArray() {
+
+}
