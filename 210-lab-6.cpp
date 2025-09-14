@@ -18,9 +18,12 @@ void outputArrayData(double *);
 double sumArray();
 
 int main(){
-  // using dynamic memory allocation, create an array of doubles of size 5.
+  double *arrptr = nullptr;
+  arrptr = new double[ARRAY_SIZE];
 
   // Pass the array to the three functions to populate, output, and sum the array.
+
+  delete [] arrptr;
 
   return 0;
 }
