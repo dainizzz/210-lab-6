@@ -12,23 +12,26 @@ const int ARRAY_SIZE = 5;
 void enterArrayData(double *, int);
 
 // outputArrayData() receives a dynamic double array and outputs its contents on one line.
-// arguments: a dynamic array of type double
+// arguments: a dynamic array of type double, an int representing the array's size
 // returns: nothing
 void outputArrayData(double *, int);
 
 // sumArray() receives a dynamic double array and both calculates and returns its sum.
-// arguments: a dynamic array of type double
+// arguments: a dynamic array of type double, an int representing the array's size
 // returns: the sum of the values in the array
 double sumArray(double *, int);
 
 int main() {
+	// declaring a pointer variable of the same type as the array
 	double *arrptr = nullptr;
+	// using new operator to create a dynamic array of the desired size
 	arrptr = new double[ARRAY_SIZE];
 
 	enterArrayData(arrptr, ARRAY_SIZE);
 	outputArrayData(arrptr, ARRAY_SIZE);
 	cout << "\nSum of values: " << sumArray(arrptr, ARRAY_SIZE) << endl;
 
+	// using delete operator to delete the dynamic array
 	delete [] arrptr;
 
 	return 0;
@@ -38,6 +41,7 @@ void enterArrayData(double *arrptr, const int size) {
 	cout << "Data entry for the array:" << endl;
 	for (int i = 0; i < size; i++) {
 		cout << "\t> Element #" << i << ": ";
+		// Using pointer notation to store value in array
 		cin >> *(arrptr + i);
 	}
 	cout << "Data entry complete." << endl;
@@ -46,6 +50,7 @@ void enterArrayData(double *arrptr, const int size) {
 void outputArrayData(double *arrptr, const int size) {
 	cout << "Outputting array elements: ";
 	for (int i = 0; i < size; i++) {
+		// Using pointer notation to access value in array
 		cout << *(arrptr + i) << " ";
 	}
 }
@@ -53,6 +58,7 @@ void outputArrayData(double *arrptr, const int size) {
 double sumArray(double *arrptr, const int size) {
 	double sum = 0;
 	for (int i = 0; i < size; i++) {
+		// Using pointer notation to access value in array
 		sum += *(arrptr + i);
 	}
 	return sum;
