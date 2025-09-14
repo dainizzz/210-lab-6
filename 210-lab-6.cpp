@@ -22,16 +22,16 @@ void outputArrayData(double *, int);
 double sumArray(double *, int);
 
 int main() {
-	// declaring a pointer variable of the same type as the array
+	// Declaring a pointer variable of the same type as the array
 	double *arrptr = nullptr;
-	// using new operator to create a dynamic array of the desired size
+	// Using new operator to create a dynamic array of the desired size
 	arrptr = new double[ARRAY_SIZE];
 
 	enterArrayData(arrptr, ARRAY_SIZE);
 	outputArrayData(arrptr, ARRAY_SIZE);
 	cout << "\nSum of values: " << sumArray(arrptr, ARRAY_SIZE) << endl;
 
-	// using delete operator to delete the dynamic array
+	// Using delete operator to delete the dynamic array
 	delete [] arrptr;
 
 	return 0;
